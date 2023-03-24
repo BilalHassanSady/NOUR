@@ -1,0 +1,57 @@
+﻿<Page x:Class="Nour.view.Chapters"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Nour.view"
+      mc:Ignorable="d" 
+      DataContext="{StaticResource chapter}"
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="Chapters">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+    
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="0" Grid.Column="0">
+                <Button Command="{Binding OpenWeb}" CommandParameter="kinetics" Content="kinetics" Margin="4" FontSize="20"/>
+                <Button Command="{Binding OpenWeb}" CommandParameter="kinetics_q" Content="question" Margin="4"/>
+            </StackPanel>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="0" Grid.Column="1">
+                <Button Command="{Binding OpenWeb}" CommandParameter="electro" Content="electro" Margin="4" FontSize="20"/>
+                <Button Command="{Binding OpenWeb}" CommandParameter="electro_q" Content="question" Margin="4"/>
+            </StackPanel>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="0" Grid.Column="2">
+                <Button Command="{Binding OpenWeb}" CommandParameter="equilibrium"  Content="equilibrium" Margin="4" FontSize="20"/>
+                <Button Command="{Binding OpenWeb}" CommandParameter="equilibrium_q" Content="question" Margin="4"/>
+            </StackPanel>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="1" Grid.Column="0">
+                <Button Command="{Binding OpenWeb}" CommandParameter="organic"  Content="organic" Margin="4" FontSize="20"/>
+                <Button Command="{Binding OpenWeb}" CommandParameter="organic_q" Content="question" Margin="4"/>
+            </StackPanel>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="1" Grid.Column="2">
+                <Button Command="{Binding OpenWeb}" CommandParameter="stoichiometry"  Content="stoichiometry" Margin="3" FontSize="20"/>
+                <Button Command="{Binding OpenWeb}" CommandParameter="stoichiometry_q" Content="question" Margin="4"/>
+            </StackPanel>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="2" Grid.Column="2">
+                <Button Command="{Binding OpenWeb}" CommandParameter="TOC" Content="TOC" Margin="4" FontSize="20"/>
+            </StackPanel>
+            <StackPanel  VerticalAlignment="Center" Grid.Row="2" Grid.Column="0">
+                <Button Command="{Binding OpenWeb}" CommandParameter="URT" Grid.Column="0" Grid.Row="2" Content="URT" Margin="4" FontSize="20"/>
+            </StackPanel>
+            <Button Command="{Binding OpenWeb}" CommandParameter="ASK" Grid.Column="1" Grid.Row="2" Content="ASK"  Margin="4" FontSize="20"/>
+        </Grid>
+    </Grid>
+</Page>
